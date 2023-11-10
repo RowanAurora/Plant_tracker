@@ -1,0 +1,30 @@
+<h1>HELLO PLANTS</h1>
+<ul>
+  <% @plant_list.each do |plant| %>
+    <li class="<%=does_plant_need_water(plant)%>">
+      <a href="/plants/<%= plant[:id] %>">
+      <%= plant[:common_name] %>
+      </a>  
+    </li>
+    <% end %>
+</ul>
+
+<nav>
+    <a class="links" href="/rooms">Manange Rooms</a><!--
+    --><a class="links"href="/plants/new">NEW</a>
+</nav>
+
+<form action="/plants" method="get">
+      <select id="room_name" name="room_name" >
+        <% @rooms.each do |room|%>
+          <option><%=room[:room_name]%></option>
+        <% end%>
+      </select>
+      <button type="submit">Sort</button>
+</form>
+
+<form action="/plants" method="get">
+      <button type="submit">clear</button>
+</form>
+
+

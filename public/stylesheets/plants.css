@@ -1,0 +1,60 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../images/spider.jpg");
+  text-align: center;
+  background-size: cover;
+}
+
+.cover {
+  display: block;
+  width: 80%;
+  height: 1200px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgba(250, 250, 250, 0.723);
+}
+
+ul {
+  list-style: none;
+  font-size: 1.5rem;
+  background-color: rgba(255, 235, 205, 0.757);
+}
+
+ul li {
+  padding: 10px 0px;
+}
+
+/* ul li:nth-child(odd) {
+  background-color: rgba(127, 255, 212, 0.554);
+
+} */
+
+ul li.water-me {
+  background-color: rgb(246, 177, 190);
+}
+
+ul li.watered {
+  background-color: rgb(201, 201, 255);
+}
+
+footer a {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: azure;
+  border: 2px solid black;
+}
+
+nav a {
+  display: inline-block;
+  width:50%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: azure;
+  border: 2px solid black;
+}

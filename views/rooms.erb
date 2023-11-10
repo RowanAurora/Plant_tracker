@@ -1,0 +1,17 @@
+<ul>
+  <% @rooms.each do |room| %>
+    <li>
+      <a href="/rooms/<%= room[:id] %>">
+      <%= room[:room_name] %>
+      </a>  
+    </li>
+    <% end %>
+</ul>
+
+<form action="/rooms/new" method="post">
+  <dl>
+    <dt><label for="room_name">New Room Name:</label></dt><!--
+    --><dd><input type="text" name="room_name" value=""><dd>
+  </dl>
+  <button type="submit" >Submit</button>
+</form>

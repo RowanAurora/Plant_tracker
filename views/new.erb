@@ -1,0 +1,37 @@
+<form action="/plants/new" method="post">
+
+  <dl>
+    <dt></label for="common_name">Common Name</label></dt>
+    <dd><input type="text" id="common_name" name="common_name" value="" ></dd>
+  </dl>
+  
+  <dl>
+    <dt></label for="scientific_name">Scientific Name</label></dt>
+    <dd><input type="text" id="scientific_name" name="scientific_name" value="" ></dd>
+  </dl>  
+
+  <dl>
+    <dt></label for="water_frequency">Days Between Waterings</label></dt>
+    <dd><input type="number" id="water_frequency" name="water_frequency" value="" ></dd>
+  </dl>  
+
+  <dl>
+    <dt></label for="light">Light Conditions</label></dt>
+    <dd><input type="text" id="light" name="light" value="" ></dd>
+  </dl>
+
+  <dl>
+    <dt></label for="room">Room</label></dt>
+    <dd>
+      <select id="room_name" name="room_name" >
+        <% @rooms.each do |room|%>
+          <option><%=room[:room_name]%></option>
+        <% end%>
+      </select>
+    </dd>
+  </dl>
+
+<button type="submit" value="submit" >Submit</button>
+
+</form>
+

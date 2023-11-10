@@ -1,0 +1,36 @@
+<form action="/plants/<%= @plant[:id] %>/edit" method="post">
+
+  <dl>
+    <dt></label for="common_name">Common Name</label></dt>
+    <dd><input type="text" id="common_name" name="common_name" value="<%= @plant[:common_name] %>" ></dd>
+  </dl>
+  
+  <dl>
+    <dt></label for="scientific_name">Scientific Name</label></dt>
+    <dd><input type="text" id="scientific_name" name="scientific_name" value="<%= @plant[:scientific_name] %>" ></dd>
+  </dl>  
+
+  <dl>
+    <dt></label for="water_frequency">Days Between Waterings</label></dt>
+    <dd><input type="number" id="water_frequency" name="water_frequency" value="<%= @plant[:water_frequency] %>" ></dd>
+  </dl>  
+
+  <dl>
+    <dt></label for="light">Light Conditions</label></dt>
+    <dd><input type="text" id="light" name="light" value="<%= @plant[:light] %>" ></dd>
+  </dl>
+
+  <dl>
+    <dt></label for="room">Room</label></dt>
+    <dd>
+      <select id="room_name" name="room_name" >
+        <% @rooms.each do |room|%>
+          <option><%=room[:room_name]%></option>
+        <% end%>
+      </select>
+    </dd>
+  </dl>
+
+  <button type="submit">Submit</button>
+</form>
+

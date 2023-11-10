@@ -1,0 +1,22 @@
+<ul>
+  <% counter = 0 %>
+  <% @plant.values[1..-1].each do |info| %>
+    <li>
+      <%= "#{@descriptors[counter]}: #{info}" %>
+    </li>
+    <% counter += 1%>
+    <% end %>
+</ul>
+
+<form action ="/plants/<%= @plant[:id].to_i %>/watered" method="post">
+  <button type= "submit" formaction="/plants/<%= @plant[:id].to_i %>/watered" method="post" value="">WATER ME</button>
+</form>
+<a href ="/plants/<%= @plant[:id].to_i %>/edit">EDIT</a>
+
+<form action="/delete/plant" method="post"> 
+  <input type="hidden" name="plant_id" value=<%=@plant[:id].to_i%>>
+  <input type="hidden" name="room_id" value=<%=@plant[:room_name].to_i%>>
+  <button type="submit"> DELETE </button>
+</form>
+
+

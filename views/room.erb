@@ -1,0 +1,15 @@
+<h2><%= @room[:room_name] %></h2>
+
+
+<form action="/rooms/<%=@room[:id]%>" method="post">
+  <dl>
+    <dt><label for="room_name">Change Room Name:</label></dt><!--
+    --><dd><input type="text" name="room_name" value="<%= @room[:room_name] %>"><dd>
+  </dl>
+  <button type="submit" >Change Name</button>
+</form>
+
+<form action="/delete/room" method="post"> 
+  <input type="hidden" name="room_id" value="<%=@room[:id].to_i%>">
+  <button type="submit"> DELETE </button>
+</form>
